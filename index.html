@@ -31,7 +31,7 @@ input[type="date"], input[type="datetime-local"] {min-width:0; max-width:100%; w
 #anatomyBackground{opacity:.76;pointer-events:none}#anatomyView{background:#f8fbfe;border-color:#afc8df}#portSvg{background:white}
 </style></head><body>
 <div class="app" id="app">
-<header class="top"><h1>Hugo RAS 症例報告</h1><div class="sub">iPad・Safari試作版 v0.6｜縦スクロール入力｜ダミーデータ専用</div></header>
+<header class="top"><h1>Hugo RAS 症例報告</h1><div class="sub">iPad・Safari試作版 v0.7｜縦スクロール入力｜ダミーデータ専用</div></header>
 <div class="notice">⚠️ 試作版です。患者氏名・患者ID・実際の医療情報などは入力しないでください。端末内の保存はバックアップの代わりになりません。</div>
 <div class="notice" id="previewNotice" style="display:none;background:#eaf2ff;color:#204469;border-color:#b5ceef">ℹ️ ファイルのプレビュー表示では入力やボタンが動かないことがあります。すべての機能を使う場合は、このHTMLをHTTPSのWebサイトとして公開し、Safariのアドレスバーから開いてください。会社支給iPadでは公開前に社内ルールをご確認ください。</div>
 <div class="nav"><a href="#case">症例</a><a href="#staff">スタッフ</a><a href="#patient">患者</a><a href="#accessories">機器</a><a href="#instruments">器具</a><a href="#timeline">時間</a><a href="#ports">ポート</a><a href="#issues">トラブル</a><a href="#memo">メモ</a><a href="#database">症例一覧・分析</a></div>
@@ -73,7 +73,7 @@ input[type="date"], input[type="datetime-local"] {min-width:0; max-width:100%; w
  </div>
 </section>
 <input id="dbImportFile" type="file" accept=".json,application/json" hidden>
-<footer>試作版 v0.6 ｜ SafariでPDF保存：印刷プレビューから共有 →「ファイルに保存」｜実データは入力しないでください</footer></div>
+<footer>試作版 v0.7 ｜ SafariでPDF保存：印刷プレビューから共有 →「ファイルに保存」｜実データは入力しないでください</footer></div>
 <div class="actions"><button id="newCase" class="danger">新規症例</button><button id="quickSaveRecord" class="primary">症例を一覧へ保存</button><button id="goDatabase">症例一覧</button><button id="saveJson">バックアップ保存</button><button id="restoreJson">バックアップ読込</button><button id="exportInternal" class="primary">社内用PDF</button><button id="exportHospital" class="orange">病院用PDF</button></div>
 <div class="modal" id="hospitalModal"><div class="modalbox"><h2>病院報告用PDF：掲載項目を選択</h2><p class="muted">チェックした情報だけを出力します。初期状態ではスタッフ・患者情報・トラブル・メモは除外しています。PDF保存前に必ず表示内容を確認してください。</p><div class="options" id="hospitalOptions"></div><label class="switchline"><input type="checkbox" id="rememberHospital">今回の選択をこの端末に記憶する</label><div class="row spaced"><button id="cancelHospital">キャンセル</button><button id="confirmHospital" class="primary">選択項目でPDF出力</button></div><div class="pdf-hint">iPad Safariでは印刷画面を開き、プレビューを拡大して共有メニューから「ファイルに保存」を選ぶとPDF化できます。ブラウザの操作はiPadOSの版により異なります。</div></div></div>
 <div class="report" id="printArea"></div><input type="file" id="restoreFile" accept="application/json,.json" hidden>
